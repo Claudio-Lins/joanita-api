@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "Home",
+  "info": {
+    "name": "Home"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    },
+    "Images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.img-item"
+    },
+    "Hero": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.hero"
+    }
+  }
+}
