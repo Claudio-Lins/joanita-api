@@ -35,6 +35,10 @@
     },
     "subtitle": {
       "type": "text"
+    },
+    "tema": {
+      "via": "destaks",
+      "model": "tema"
     }
   }
 }

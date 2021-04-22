@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "temas",
   "info": {
-    "name": "Tema"
+    "name": "Tema",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -20,6 +21,10 @@
     },
     "articles": {
       "collection": "article",
+      "via": "tema"
+    },
+    "destaks": {
+      "collection": "destak",
       "via": "tema"
     }
   }

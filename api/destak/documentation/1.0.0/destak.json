@@ -665,6 +665,44 @@
           "subtitle": {
             "type": "string"
           },
+          "tema": {
+            "required": [
+              "id",
+              "nome"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nome": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "articles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "destaks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -677,6 +715,9 @@
             "type": "string"
           },
           "subtitle": {
+            "type": "string"
+          },
+          "tema": {
             "type": "string"
           },
           "published_at": {

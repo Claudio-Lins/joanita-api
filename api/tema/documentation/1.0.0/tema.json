@@ -589,6 +589,46 @@
               }
             }
           },
+          "destaks": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "cover": {
+                  "type": "string"
+                },
+                "gallery": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "title": {
+                  "type": "string"
+                },
+                "subtitle": {
+                  "type": "string"
+                },
+                "tema": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -607,6 +647,12 @@
             "type": "uid"
           },
           "articles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "destaks": {
             "type": "array",
             "items": {
               "type": "string"
