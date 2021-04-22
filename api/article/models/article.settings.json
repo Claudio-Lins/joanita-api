@@ -57,6 +57,10 @@
     "author": {
       "via": "articles",
       "model": "writer"
+    },
+    "tema": {
+      "via": "articles",
+      "model": "tema"
     }
   }
 }

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "temas",
+  "info": {
+    "name": "Tema"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nome"
+    },
+    "articles": {
+      "collection": "article",
+      "via": "tema"
+    }
+  }
+}

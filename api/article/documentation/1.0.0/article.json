@@ -682,6 +682,38 @@
                 "type": "string"
               }
             }
+          },
+          "tema": {
+            "required": [
+              "id",
+              "nome"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nome": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "articles": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -723,6 +755,9 @@
             "type": "string"
           },
           "author": {
+            "type": "string"
+          },
+          "tema": {
             "type": "string"
           },
           "created_by": {

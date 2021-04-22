@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/categories": {
+    "/temas": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Category"
+                    "$ref": "#/components/schemas/Tema"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Tema"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Tema"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Tema"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewTema"
               }
             }
           }
         }
       }
     },
-    "/categories/count": {
+    "/temas/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Tema"
         ],
         "parameters": []
       }
     },
-    "/categories/{slug}": {
+    "/temas/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Tema"
                 }
               }
             }
@@ -359,11 +359,11 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Tema"
         ],
         "parameters": [
           {
-            "name": "slug",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -373,9 +373,7 @@
             }
           }
         ]
-      }
-    },
-    "/categories/{id}": {
+      },
       "put": {
         "deprecated": false,
         "description": "Update a record",
@@ -385,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Category"
+                  "$ref": "#/components/schemas/Tema"
                 }
               }
             }
@@ -423,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Tema"
         ],
         "requestBody": {
           "description": "",
@@ -431,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCategory"
+                "$ref": "#/components/schemas/NewTema"
               }
             }
           }
@@ -497,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Category"
+          "Tema"
         ],
         "parameters": [
           {
@@ -516,17 +514,16 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "Tema": {
         "required": [
           "id",
-          "name",
-          "slug"
+          "nome"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "nome": {
             "type": "string"
           },
           "slug": {
@@ -591,16 +588,19 @@
                 }
               }
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewCategory": {
+      "NewTema": {
         "required": [
-          "name",
-          "slug"
+          "nome"
         ],
         "properties": {
-          "name": {
+          "nome": {
             "type": "string"
           },
           "slug": {
@@ -611,6 +611,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -624,7 +628,7 @@
   },
   "tags": [
     {
-      "name": "Category"
+      "name": "Tema"
     }
   ]
 }
