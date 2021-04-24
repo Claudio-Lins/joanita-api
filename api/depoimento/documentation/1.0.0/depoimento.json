@@ -524,8 +524,7 @@
             "type": "string"
           },
           "nome": {
-            "type": "string",
-            "minLength": 3
+            "type": "string"
           },
           "slug": {
             "type": "uid"
@@ -615,8 +614,7 @@
         ],
         "properties": {
           "nome": {
-            "type": "string",
-            "minLength": 3
+            "type": "string"
           },
           "slug": {
             "type": "uid"

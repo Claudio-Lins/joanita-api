@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "depoimentos",
   "info": {
-    "name": "Depoimento"
+    "name": "Depoimento",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -12,8 +13,7 @@
   "attributes": {
     "nome": {
       "type": "string",
-      "required": true,
-      "minLength": 3
+      "required": true
     },
     "slug": {
       "type": "uid",
