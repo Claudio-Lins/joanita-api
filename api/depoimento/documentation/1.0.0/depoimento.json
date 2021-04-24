@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/destaks": {
+    "/depoimentos": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Destak"
+                    "$ref": "#/components/schemas/Depoimento"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Destak"
+          "Depoimento"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Destak"
+                  "$ref": "#/components/schemas/Depoimento"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Destak"
+          "Depoimento"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDestak"
+                "$ref": "#/components/schemas/NewDepoimento"
               }
             }
           }
         }
       }
     },
-    "/destaks/count": {
+    "/depoimentos/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Destak"
+          "Depoimento"
         ],
         "parameters": []
       }
     },
-    "/destaks/{id}": {
+    "/depoimentos/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Destak"
+                  "$ref": "#/components/schemas/Depoimento"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Destak"
+          "Depoimento"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Destak"
+                  "$ref": "#/components/schemas/Depoimento"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Destak"
+          "Depoimento"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDestak"
+                "$ref": "#/components/schemas/NewDepoimento"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Destak"
+          "Depoimento"
         ],
         "parameters": [
           {
@@ -514,21 +514,28 @@
   },
   "components": {
     "schemas": {
-      "Destak": {
+      "Depoimento": {
         "required": [
-          "id"
+          "id",
+          "nome"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Title": {
+          "nome": {
             "type": "string"
           },
-          "Description": {
+          "slug": {
+            "type": "uid"
+          },
+          "email": {
             "type": "string"
           },
-          "Cover": {
+          "mensagem": {
+            "type": "string"
+          },
+          "picture": {
             "required": [
               "id",
               "name",
@@ -595,135 +602,27 @@
               }
             }
           },
-          "Gallery": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "title": {
-            "type": "string"
-          },
-          "subtitle": {
-            "type": "string"
-          },
-          "tema": {
-            "required": [
-              "id",
-              "nome"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nome": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "articles": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "destaks": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewDestak": {
+      "NewDepoimento": {
+        "required": [
+          "nome"
+        ],
         "properties": {
-          "title": {
+          "nome": {
             "type": "string"
           },
-          "subtitle": {
+          "slug": {
+            "type": "uid"
+          },
+          "email": {
             "type": "string"
           },
-          "tema": {
+          "mensagem": {
             "type": "string"
           },
           "published_at": {
@@ -742,7 +641,7 @@
   },
   "tags": [
     {
-      "name": "Destak"
+      "name": "Depoimento"
     }
   ]
 }

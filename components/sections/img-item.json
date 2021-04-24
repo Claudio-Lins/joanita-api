@@ -1,22 +1,15 @@
 {
-  "kind": "collectionType",
-  "collectionName": "destaks",
+  "collectionName": "components_sections_img_items",
   "info": {
-    "name": "Destak"
+    "name": "img-item",
+    "icon": "image"
   },
-  "options": {
-    "increments": true,
-    "timestamps": true,
-    "draftAndPublish": true
-  },
+  "options": {},
   "attributes": {
-    "Title": {
+    "alt": {
       "type": "string"
     },
-    "Description": {
-      "type": "text"
-    },
-    "Cover": {
+    "imageCover": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -26,7 +19,7 @@
       "plugin": "upload",
       "required": false
     },
-    "Gallery": {
+    "imageGallery": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
@@ -35,10 +28,6 @@
       ],
       "plugin": "upload",
       "required": false
-    },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Title"
     }
   }
 }
