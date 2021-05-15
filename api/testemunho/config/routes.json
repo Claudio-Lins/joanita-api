@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/testemunhos",
+      "handler": "testemunho.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/testemunhos/count",
+      "handler": "testemunho.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/testemunhos/:id",
+      "handler": "testemunho.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/testemunhos",
+      "handler": "testemunho.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/testemunhos/:id",
+      "handler": "testemunho.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/testemunhos/:id",
+      "handler": "testemunho.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
