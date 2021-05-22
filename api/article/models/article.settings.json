@@ -24,7 +24,7 @@
       "required": true
     },
     "publishedAt": {
-      "type": "datetime",
+      "type": "date",
       "required": true
     },
     "status": {

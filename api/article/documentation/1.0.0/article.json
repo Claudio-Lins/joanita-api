@@ -542,7 +542,7 @@
           },
           "publishedAt": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
           },
           "status": {
             "type": "string",
@@ -706,7 +706,7 @@
           },
           "publishedAt": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
           },
           "status": {
             "type": "string",
